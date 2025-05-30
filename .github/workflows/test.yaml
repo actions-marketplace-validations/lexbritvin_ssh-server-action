@@ -1,0 +1,24 @@
+name: Test SSH Server Action
+on: [ push ]
+
+jobs:
+  test-ssh:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup SSH Server
+        id: ssh
+        uses: ./
+        with:
+          port: 2222
+          use-actor-ssh-keys: true
+
+      - name: Verify SSH Server
+        run: |
+          echo "SSH server is running on ${{ steps.ssh.outputs.hostname }}:${{ steps.ssh.outputs.port }}"
+          echo "SSH username: ${{ steps.ssh.outputs.username }}"
