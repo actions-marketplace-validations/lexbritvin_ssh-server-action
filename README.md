@@ -5,12 +5,12 @@ macOS, and Linux.
 
 **This is only part of the solution** - to actually connect to the SSH server, you'll need to expose it through:
 
-- **Jump host** - Using a dedicated server as a proxy, see [lexbritvin/ssh-action](https://github.com/lexbritvin/ssh-action)
+- **Jump host** - Using a dedicated server as a proxy, see [SSH Command & Port Forwarding Action](https://github.com/marketplace/actions/ssh-command-port-forwarding)
 - **Tailscale** - For secure network mesh connections, see [Tailscale Github Action](https://github.com/marketplace/actions/connect-tailscale)
 - **ngrok** - For temporary public tunnels, see [Github Marketplace](https://github.com/marketplace?query=ngrok)
 - [Other tunneling solutions](https://github.com/anderspitman/awesome-tunneling)
 
-For a complete debugging setup, see [lexbritvin/ssh-debug-action](https://github.com/lexbritvin/ssh-debug-action).
+For a complete setup, see [lexbritvin/ssh-session-action](https://github.com/marketplace/actions/ssh-session).
 
 ## ✨ Features
 
